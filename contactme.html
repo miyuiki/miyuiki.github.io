@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Content Me</title>
+        <title>Contact Me</title>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Item Blur Effect with CSS3 and jQuery - Using Box Shadows, Transform and Transitions" />
         <meta name="keywords" content="blur, css3, transition, jquery, box shadow, text shadow, articles, scale, transform, animation" />
         <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="shortcut icon" href="../favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/modernizr.custom.34978.js"></script>  
+    <script src="js/modernizr.custom.34978.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/spacelab/bootstrap.min.css" rel="stylesheet">
 
 
@@ -52,7 +52,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.html"target="_self">關於我<span class="sr-only">(current)</span></a></li>
-        <li><a href="contentme.html"target="_self">聯絡我</a></li>
+        <li><a href="contactme.html"target="_self">聯絡我</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -125,34 +125,34 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(function() {
-        
+
         var $container  = $('#ib-container'),
           $articles = $container.children('article'),
           timeout;
-        
+
         $articles.on( 'mouseenter', function( event ) {
-            
+
           var $article  = $(this);
           clearTimeout( timeout );
           timeout = setTimeout( function() {
-            
+
             if( $article.hasClass('active') ) return false;
-            
+
             $articles.not( $article.removeClass('blur').addClass('active') )
                  .removeClass('active')
                  .addClass('blur');
-            
+
           }, 65 );
-          
+
         });
-        
+
         $container.on( 'mouseleave', function( event ) {
-          
+
           clearTimeout( timeout );
           $articles.removeClass('active blur');
-          
+
         });
-      
+
       });
     </script>
     </body>
